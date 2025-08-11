@@ -1109,9 +1109,9 @@ if ('IntersectionObserver' in window) {
 // Preload critical resources
 function preloadCriticalResources() {
     const criticalImages = [
-        './assets/images/profile-placeholder.svg',
-        './assets/images/projects/project-placeholder.svg',
-        './assets/images/projects/mobile-placeholder.svg'
+        './images/Perfil.svg',
+        './images/projects/project-placeholder.svg',
+        './images/projects/mobile-placeholder.svg'
     ];
 
     criticalImages.forEach(src => {

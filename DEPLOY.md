@@ -319,7 +319,7 @@ Se encontrar problemas:
 1. Verifique o console do navegador (F12)
 2. Teste em modo incógnito
 3. Verifique documentação da plataforma
-4. Entre em contato via GitHub Issues
+4. via GitHub Issues
 
 ---
 

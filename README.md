@@ -75,7 +75,7 @@ portfolio-gustavo/
 │   ├── fonts/
 │   │   └── fonts.css      # Importação das fontes
 │   └── images/
-│       ├── profile-placeholder.svg
+│       ├── Perfil.svg
 │       └── projects/
 │           ├── project-placeholder.svg
 │           └── mobile-placeholder.svg
@@ -133,7 +133,7 @@ No arquivo `scripts/main.js`, localize o objeto `projectsData` e atualize:
 
 #### 3. Imagens
 Substitua os arquivos placeholder por suas imagens:
-- `assets/images/profile-placeholder.svg` → sua foto
+- `assets/images/` → sua foto
 - `assets/images/projects/` → screenshots dos projetos
 
 #### 4. Cores e Estilo
@@ -317,5 +317,6 @@ Contribuições são bem-vindas! Para contribuir:
 ---
 
 **Desenvolvido com 💙 e muito ☕ por Gustavo Souza**
-#   G u s t a v o  
+#   G u s t a v o 
+ 
  
