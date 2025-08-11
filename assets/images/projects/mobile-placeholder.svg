@@ -1,0 +1,71 @@
+<svg width="300" height="600" viewBox="0 0 300 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0b0f17;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1f2e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="neon-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00e5ff;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#9b5cff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff3db1;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Phone outline -->
+  <rect x="20" y="20" width="260" height="560" rx="30" fill="#1a1f2e" stroke="url(#neon-gradient)" stroke-width="2"/>
+  
+  <!-- Screen -->
+  <rect x="35" y="60" width="230" height="480" rx="20" fill="url(#bg-gradient)"/>
+  
+  <!-- Status bar -->
+  <rect x="45" y="70" width="210" height="20" fill="#0b0f17" opacity="0.5"/>
+  <text x="50" y="83" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#b8c5d6" opacity="0.8">9:41</text>
+  <circle cx="230" cy="80" r="3" fill="#00e5ff" opacity="0.8"/>
+  <rect x="235" y="77" width="15" height="6" rx="2" fill="#b8c5d6" opacity="0.6"/>
+  
+  <!-- Header -->
+  <rect x="45" y="100" width="210" height="40" fill="#1a1f2e" opacity="0.8"/>
+  <rect x="55" y="110" width="120" height="15" rx="3" fill="url(#neon-gradient)" opacity="0.8" filter="url(#glow)"/>
+  <circle cx="235" cy="120" r="8" fill="url(#neon-gradient)" opacity="0.6"/>
+  
+  <!-- Content cards -->
+  <rect x="55" y="160" width="190" height="80" rx="8" fill="#242938" stroke="url(#neon-gradient)" stroke-width="0.5" opacity="0.8"/>
+  <rect x="65" y="170" width="120" height="10" rx="2" fill="url(#neon-gradient)" opacity="0.7"/>
+  <rect x="65" y="190" width="90" height="8" rx="1" fill="#b8c5d6" opacity="0.5"/>
+  <rect x="65" y="205" width="110" height="8" rx="1" fill="#b8c5d6" opacity="0.5"/>
+  <rect x="65" y="220" width="80" height="8" rx="1" fill="#b8c5d6" opacity="0.5"/>
+  
+  <rect x="55" y="260" width="190" height="80" rx="8" fill="#242938" stroke="url(#neon-gradient)" stroke-width="0.5" opacity="0.8"/>
+  <rect x="65" y="270" width="120" height="10" rx="2" fill="url(#neon-gradient)" opacity="0.7"/>
+  <rect x="65" y="290" width="90" height="8" rx="1" fill="#b8c5d6" opacity="0.5"/>
+  <rect x="65" y="305" width="110" height="8" rx="1" fill="#b8c5d6" opacity="0.5"/>
+  <rect x="65" y="320" width="80" height="8" rx="1" fill="#b8c5d6" opacity="0.5"/>
+  
+  <rect x="55" y="360" width="190" height="80" rx="8" fill="#242938" stroke="url(#neon-gradient)" stroke-width="0.5" opacity="0.8"/>
+  <rect x="65" y="370" width="120" height="10" rx="2" fill="url(#neon-gradient)" opacity="0.7"/>
+  <rect x="65" y="390" width="90" height="8" rx="1" fill="#b8c5d6" opacity="0.5"/>
+  <rect x="65" y="405" width="110" height="8" rx="1" fill="#b8c5d6" opacity="0.5"/>
+  <rect x="65" y="420" width="80" height="8" rx="1" fill="#b8c5d6" opacity="0.5"/>
+  
+  <!-- Bottom navigation -->
+  <rect x="45" y="480" width="210" height="50" fill="#1a1f2e" opacity="0.8"/>
+  <circle cx="80" cy="505" r="12" fill="url(#neon-gradient)" opacity="0.6"/>
+  <circle cx="150" cy="505" r="12" fill="#b8c5d6" opacity="0.3"/>
+  <circle cx="220" cy="505" r="12" fill="#b8c5d6" opacity="0.3"/>
+  
+  <!-- Home indicator -->
+  <rect x="130" y="555" width="40" height="4" rx="2" fill="#b8c5d6" opacity="0.5"/>
+  
+  <!-- Decorative glow -->
+  <circle cx="150" cy="300" r="100" fill="url(#neon-gradient)" opacity="0.05"/>
+  
+  <!-- Text overlay -->
+  <text x="150" y="580" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500" text-anchor="middle" fill="#b8c5d6" opacity="0.6">Mobile View</text>
+</svg>

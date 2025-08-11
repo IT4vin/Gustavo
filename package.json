@@ -1,0 +1,26 @@
+{
+  "name": "portfolio-gustavo-souza",
+  "version": "1.0.0",
+  "description": "Portfolio profissional com design neon",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -p 8000 -c-1",
+    "dev": "npx live-server --port=8000 --open=index.html",
+    "build": "echo 'Projeto estático - não precisa de build'",
+    "deploy": "echo 'Veja DEPLOY.md para instruções'"
+  },
+  "keywords": [
+    "portfolio",
+    "html",
+    "css",
+    "javascript",
+    "neon",
+    "responsive"
+  ],
+  "author": "Gustavo Souza",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "live-server": "^1.2.2"
+  }
+}

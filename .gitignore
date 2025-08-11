@@ -1,0 +1,77 @@
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Production builds
+dist/
+build/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+logs
+*.log
+
+# Cache
+.cache/
+.parcel-cache/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Backup files
+*.bak
+*.backup
+
+# Package manager lockfiles (keep one, ignore others if using different managers)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# Testing
+coverage/
+.nyc_output/
+
+# Deployment
+.netlify/
+.vercel/
+
+# Local development
+.local/
+.vscode/settings.json
+
+# Images - original/unprocessed (keep processed versions)
+# Uncomment if you want to ignore source images
+# assets/images/original/
+# assets/images/raw/
+
+# Documentation drafts
+# docs/drafts/
+
+# Personal notes
+notes.md
+todo.txt
