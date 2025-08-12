@@ -1476,9 +1476,18 @@ img, svg, video, canvas {
   /* Projects Mobile */
   .project__row,
   .project__row--reverse {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 0.6fr;
     gap: var(--spacing-lg);
-    text-align: center;
+    align-items: center;
+    text-align: initial;
+  }
+
+  .project__row--reverse {
+    grid-template-columns: 0.6fr 1fr;
+  }
+
+  .project__mockup--mobile {
+    margin: 0;
   }
   
   .project__mockup--mobile {
@@ -1569,8 +1578,13 @@ img, svg, video, canvas {
     grid-template-columns: repeat(2, 1fr);
   }
   
+  .project__row,
+  .project__row--reverse {
+    grid-template-columns: 1fr 0.8fr;
+    gap: var(--spacing-md);
+  }
   .project__mockup--mobile {
-    max-width: 120px;
+    max-width: 130px;
   }
 
   /* Botão scroll-top menor em telas muito pequenas */
