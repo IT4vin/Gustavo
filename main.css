@@ -74,6 +74,8 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
@@ -84,6 +86,12 @@ body {
   background: var(--bg-dark);
   overflow-x: hidden;
   position: relative;
+}
+
+/* Imagens fluidas e elementos de mídia */
+img, svg, video, canvas {
+  max-width: 100%;
+  height: auto;
 }
 
 /* Background Interativo */
@@ -428,6 +436,7 @@ body {
   height: var(--header-height);
   background: rgba(11, 15, 23, 0.95);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(0, 229, 255, 0.1);
   z-index: var(--z-header);
   transition: all var(--transition-normal);
@@ -571,6 +580,12 @@ body {
   align-items: center;
   padding-top: var(--header-height);
   overflow: hidden;
+}
+
+@supports (height: 100svh) {
+  .hero {
+    min-height: 100svh;
+  }
 }
 
 .particles-container { display: none !important; }
@@ -1311,6 +1326,12 @@ body {
     transition: right var(--transition-normal);
     padding: var(--spacing-2xl) var(--spacing-md);
   }
+
+  @supports (height: 100svh) {
+    .nav__menu {
+      height: 100svh;
+    }
+  }
   
   .nav__menu.show {
     right: 0;
@@ -1462,6 +1483,25 @@ body {
   }
 }
 
+/* ===== TABLET ADJUSTMENTS ===== */
+@media (max-width: 1024px) {
+  .about__content {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+  }
+  .projects__content {
+    gap: var(--spacing-xl);
+  }
+  .project__row,
+  .project__row--reverse {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+  }
+  .contact__content {
+    gap: var(--spacing-xl);
+  }
+}
+
 @media (max-width: 480px) {
   .hero__name {
     font-size: 2.5rem;
@@ -1482,13 +1522,23 @@ body {
   .project__mockup--mobile {
     max-width: 120px;
   }
+
+  /* Botão scroll-top menor em telas muito pequenas */
+  .scroll-top-btn {
+    width: 55px;
+    height: 55px;
+  }
+  .scroll-top-icon {
+    width: 28px;
+    height: 28px;
+  }
 }
 
 /* ===== WHATSAPP BUTTON ===== */
 .whatsapp-btn {
   position: fixed;
-  bottom: 2rem;
-  right: 2rem;
+  bottom: calc(2rem + env(safe-area-inset-bottom, 0px));
+  right: calc(2rem + env(safe-area-inset-right, 0px));
   width: 60px;
   height: 60px;
   background: var(--gradient-neon);
@@ -1581,8 +1631,8 @@ body {
 
 .scroll-top-btn {
   position: fixed;
-  bottom: 2rem;
-  left: 2rem;
+  bottom: calc(2rem + env(safe-area-inset-bottom, 0px));
+  left: calc(2rem + env(safe-area-inset-left, 0px));
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -1623,8 +1673,8 @@ body {
 
 @media (max-width: 768px) {
   .scroll-top-btn {
-    bottom: 1.5rem;
-    left: 1.5rem;
+    bottom: calc(1.5rem + env(safe-area-inset-bottom, 0px));
+    left: calc(1.5rem + env(safe-area-inset-left, 0px));
   }
 }
 
