@@ -1451,6 +1451,7 @@ img, svg, video, canvas {
     grid-template-columns: 1fr;
     gap: var(--spacing-xl);
     text-align: center;
+    align-items: start;
   }
   .about__image {
     display: flex;
@@ -1463,6 +1464,13 @@ img, svg, video, canvas {
   .about__img {
     width: 100%;
     height: auto;
+  }
+  .about__data {
+    display: grid;
+    gap: var(--spacing-md);
+    max-width: 680px;
+    margin: 0 auto;
+    text-align: left;
   }
   
   .about__info {
@@ -1572,6 +1580,9 @@ img, svg, video, canvas {
 @media (max-width: 480px) {
   .about__img-wrapper {
     width: clamp(260px, 90vw, 360px);
+  }
+  .about__data {
+    padding: 0 var(--spacing-sm);
   }
   .skill__icon {
     width: 2.5rem;
