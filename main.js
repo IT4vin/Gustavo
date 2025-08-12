@@ -47,6 +47,7 @@ function initApp() {
     initSmoothScroll();
     initScrollHeader();
     initInteractiveBackground();
+    initScrollToTop();
     
     // Register GSAP plugins
     gsap.registerPlugin(ScrollTrigger);
@@ -170,6 +171,35 @@ function updateActiveSection() {
                 }
             }
         }
+    });
+}
+
+// ===== SCROLL TO TOP =====
+function initScrollToTop() {
+    const btn = document.getElementById('scroll-top-btn');
+    if (!btn) return;
+
+    const SHOW_AFTER = 300; // px
+
+    const toggleVisibility = () => {
+        if (window.scrollY > SHOW_AFTER) {
+            btn.classList.add('show');
+        } else {
+            btn.classList.remove('show');
+        }
+    };
+
+    // initial state
+    toggleVisibility();
+
+    // scroll listener (throttled)
+    window.addEventListener('scroll', throttle(toggleVisibility, 150));
+
+    // click to scroll smoothly to top
+    btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        const homeLink = document.querySelector('.nav__link[href="#home"]');
+        if (homeLink) updateActiveNavLink(homeLink);
     });
 }
 

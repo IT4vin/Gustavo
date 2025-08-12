@@ -1594,6 +1594,52 @@ body {
   }
 }
 
+/* ===== SCROLL TO TOP BUTTON ===== */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 6.25rem; /* acima do botão do WhatsApp (~100px) */
+  right: 2rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 229, 255, 0.25);
+  background: rgba(26, 31, 46, 0.9);
+  color: var(--neon-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: transform var(--transition-fast), opacity var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
+  z-index: calc(var(--z-tooltip) + 1);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.scroll-top-btn:hover {
+  background: var(--bg-card-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-neon-blue);
+}
+
+.scroll-top-btn.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.scroll-top-icon {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
+
+@media (max-width: 768px) {
+  .scroll-top-btn {
+    bottom: 5.5rem; /* manter acima do WhatsApp em telas menores */
+    right: 1.25rem;
+  }
+}
+
 /* ===== ACCESSIBILITY ===== */
 @media (prefers-reduced-motion: reduce) {
   .particles-container {
