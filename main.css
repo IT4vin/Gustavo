@@ -733,23 +733,24 @@ img, svg, video, canvas {
   position: relative;
   justify-self: center;
   width: 100%;
-  max-width: 420px;
+  max-width: clamp(160px, 28vw, 280px);
 }
 
 .about__img-wrapper {
   position: relative;
-  border-radius: var(--border-radius-large);
+  border-radius: 50%;
   overflow: hidden;
   background: var(--gradient-neon);
   padding: 4px;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 1 / 1;
 }
 
 .about__img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: var(--border-radius-large);
+  object-position: 50% 18%;
+  border-radius: 50%;
   display: block;
   transition: transform var(--transition-slow);
 }
@@ -763,7 +764,7 @@ img, svg, video, canvas {
   inset: 4px;
   background: var(--gradient-neon);
   opacity: 0;
-  border-radius: var(--border-radius-large);
+  border-radius: 50%;
   transition: opacity var(--transition-normal);
   pointer-events: none;
   mix-blend-mode: overlay;
@@ -1458,7 +1459,7 @@ img, svg, video, canvas {
     text-align: center;
   }
   .about__image {
-    max-width: 360px;
+    max-width: clamp(140px, 40vw, 240px);
   }
   
   .about__info {
@@ -1582,7 +1583,7 @@ img, svg, video, canvas {
     font-size: 2rem;
   }
   .about__image {
-    max-width: 300px;
+    max-width: clamp(120px, 52vw, 200px);
   }
   
   .skills__grid {
