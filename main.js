@@ -376,28 +376,8 @@ function initParticles() {
 
 // ===== GSAP ANIMATIONS =====
 function initGSAPAnimations() {
-    // Fade in animations for sections
-    gsap.utils.toArray('.section').forEach(section => {
-        gsap.fromTo(section.children, 
-            {
-                opacity: 0,
-                y: 50
-            },
-            {
-                opacity: 1,
-                y: 0,
-                duration: 1,
-                stagger: 0.2,
-                ease: 'power2.out',
-                scrollTrigger: {
-                    trigger: section,
-                    start: 'top 80%',
-                    end: 'bottom 20%',
-                    toggleActions: 'play none none reverse'
-                }
-            }
-        );
-    });
+    // O fade-in geral das seções será controlado via classes CSS (will-animate/animate-in)
+    // mantendo GSAP apenas para efeitos específicos (skills, mockups, ícones sociais).
     
     // Skills animation
     gsap.utils.toArray('.skill__item').forEach((item, index) => {
@@ -463,28 +443,46 @@ function initGSAPAnimations() {
 
 // ===== SCROLL ANIMATIONS =====
 function initScrollAnimations() {
-    // Create intersection observer for animations
+    // Se o usuário prefere menos movimento ou se for mobile, aplicamos conteúdo direto sem animar
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const isSmallScreen = window.innerWidth <= 768;
+
+    // Elementos a animar
+    const animatableSelectors = [
+        '.will-animate',
+        '.skill__item',
+        '.project__mockup',
+        '.contact__content'
+    ];
+
+    const animatableElements = document.querySelectorAll(animatableSelectors.join(', '));
+
+    if (prefersReducedMotion || isSmallScreen) {
+        // Aplicar imediatamente o estado final
+        animatableElements.forEach(el => {
+            el.classList.add('animate-in');
+            el.classList.remove('will-animate');
+        });
+        return;
+    }
+
+    // Criar observer para animar apenas quando entrar em viewport
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
     };
-    
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('animate-in');
+                entry.target.classList.remove('will-animate');
+                observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
-    
-    // Observe all animatable elements
-    const animatableElements = document.querySelectorAll(
-        '.about__content, .skill__item, .project__mockup, .contact__content'
-    );
-    
-    animatableElements.forEach(el => {
-        observer.observe(el);
-    });
+
+    animatableElements.forEach(el => observer.observe(el));
 }
 
 // ===== TILT EFFECTS =====

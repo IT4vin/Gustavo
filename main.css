@@ -295,6 +295,18 @@ img, svg, video, canvas {
   margin: 0 auto;
 }
 
+/* ===== REVEAL ANIMATIONS (padronizadas) ===== */
+.will-animate {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.animate-in {
+  opacity: 1;
+  transform: none;
+  transition: opacity var(--transition-normal), transform var(--transition-slow);
+}
+
 /* ===== BUTTONS ===== */
 .btn {
   display: inline-flex;
@@ -1471,6 +1483,20 @@ img, svg, video, canvas {
     max-width: 680px;
     margin: 0 auto;
     text-align: left;
+    /* Fallback para garantir visibilidade caso animações não disparem no mobile */
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .about__description {
+    display: block;
+    opacity: 1 !important;
+    transform: none !important;
+    word-break: break-word;
+  }
+  .about__info,
+  .about__interests {
+    opacity: 1 !important;
+    transform: none !important;
   }
   
   .about__info {
