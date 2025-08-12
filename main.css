@@ -1461,13 +1461,14 @@ img, svg, video, canvas {
   /* About Mobile */
   .about__content {
     grid-template-columns: 1fr;
-    gap: var(--spacing-xl);
+    gap: var(--spacing-md);
     text-align: center;
     align-items: start;
   }
   .about__image {
     display: flex;
     justify-content: center;
+    order: 1;
   }
   .about__img-wrapper {
     width: clamp(260px, 82vw, 380px);
@@ -1486,6 +1487,8 @@ img, svg, video, canvas {
     /* Fallback para garantir visibilidade caso animações não disparem no mobile */
     opacity: 1 !important;
     transform: none !important;
+    order: 2;
+    margin-top: var(--spacing-sm);
   }
   .about__description {
     display: block;
