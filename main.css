@@ -731,6 +731,9 @@ img, svg, video, canvas {
 
 .about__image {
   position: relative;
+  justify-self: center;
+  width: 100%;
+  max-width: 420px;
 }
 
 .about__img-wrapper {
@@ -739,11 +742,13 @@ img, svg, video, canvas {
   overflow: hidden;
   background: var(--gradient-neon);
   padding: 4px;
+  aspect-ratio: 4 / 5;
 }
 
 .about__img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   border-radius: var(--border-radius-large);
   display: block;
   transition: transform var(--transition-slow);
@@ -1452,6 +1457,9 @@ img, svg, video, canvas {
     gap: var(--spacing-xl);
     text-align: center;
   }
+  .about__image {
+    max-width: 360px;
+  }
   
   .about__info {
     max-width: 400px;
@@ -1572,6 +1580,9 @@ img, svg, video, canvas {
   
   .section__title {
     font-size: 2rem;
+  }
+  .about__image {
+    max-width: 300px;
   }
   
   .skills__grid {
