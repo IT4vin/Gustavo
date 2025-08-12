@@ -1469,6 +1469,9 @@ img, svg, video, canvas {
     display: flex;
     justify-content: center;
     order: 1;
+    /* Garantir visibilidade mesmo se classe will-animate estiver aplicada */
+    opacity: 1 !important;
+    transform: none !important;
   }
   .about__img-wrapper {
     width: clamp(260px, 82vw, 380px);
@@ -1489,6 +1492,11 @@ img, svg, video, canvas {
     transform: none !important;
     order: 2;
     margin-top: var(--spacing-sm);
+  }
+  /* Container do about visível em mobile mesmo com will-animate */
+  .about__content {
+    opacity: 1 !important;
+    transform: none !important;
   }
   .about__description {
     display: block;
