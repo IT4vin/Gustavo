@@ -1598,8 +1598,8 @@ body {
 
 .scroll-top-btn {
   position: fixed;
-  bottom: calc(2rem + 60px + 1rem); /* 1rem acima do WhatsApp */
-  right: 2rem;
+  bottom: 2rem;
+  left: 2rem;
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -1640,8 +1640,8 @@ body {
 
 @media (max-width: 768px) {
   .scroll-top-btn {
-    bottom: calc(1.5rem + 55px + 1rem);
-    right: 1.5rem;
+    bottom: 1.5rem;
+    left: 1.5rem;
   }
 }
 
