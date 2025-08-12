@@ -39,14 +39,12 @@ function initLoading() {
 function initApp() {
     initNavigation();
     initTypingEffect();
-    initParticles();
     initScrollAnimations();
     initTiltEffects();
     initContactForm();
     initProjectModals();
     initSmoothScroll();
     initScrollHeader();
-    initInteractiveBackground();
     initScrollToTop();
     
     // Register GSAP plugins
