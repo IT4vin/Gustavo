@@ -1106,7 +1106,30 @@ img, svg, video, canvas {
 .hero__bg spline-viewer {
   width: 100%;
   height: 100%;
+  position: relative;
+  z-index: 0;
 }
+
+/* Fallback visual: cobre o badge "Built with Spline" nos cantos inferior esquerdo e direito */
+.hero__bg::after,
+.contact__bg::after,
+.hero__bg::before,
+.contact__bg::before {
+  content: '';
+  position: absolute;
+  width: 180px;
+  height: 48px;
+  bottom: 12px;
+  background: var(--bg-dark);
+  border-radius: 999px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero__bg::after,
+.contact__bg::after { left: 12px; }
+.hero__bg::before,
+.contact__bg::before { right: 12px; }
 
 .contact__content > *:not(.contact__bg) {
   position: relative;
