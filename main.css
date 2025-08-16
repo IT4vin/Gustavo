@@ -591,7 +591,7 @@ img, svg, video, canvas {
   display: flex;
   align-items: center;
   padding-top: var(--header-height);
-  overflow: hidden;
+  overflow: visible;
 }
 
 @supports (height: 100svh) {
@@ -1017,6 +1017,7 @@ img, svg, video, canvas {
 .project__mockup--mobile {
   max-width: 200px;
   margin: 0 auto;
+  overflow: visible;
 }
 
 .mockup__screen {
@@ -1025,7 +1026,7 @@ img, svg, video, canvas {
   border-radius: var(--border-radius);
   padding: var(--spacing-xs);
   border: 2px solid rgba(0, 229, 255, 0.2);
-  overflow: hidden;
+  overflow: visible;
 }
 
 .project__mockup--laptop .mockup__screen {
