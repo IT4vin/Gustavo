@@ -258,7 +258,6 @@ img, svg, video, canvas {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 var(--spacing-sm);
-  overflow: visible;
 }
 
 .section {
@@ -592,7 +591,21 @@ img, svg, video, canvas {
   display: flex;
   align-items: center;
   padding-top: var(--header-height);
-  overflow: visible;
+  overflow: hidden;
+}
+
+/* Spline background for Hero */
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.35;
+}
+
+.hero__bg spline-viewer {
+  width: 100%;
+  height: 100%;
 }
 
 @supports (height: 100svh) {
@@ -608,41 +621,10 @@ img, svg, video, canvas {
   z-index: 1;
 }
 
-.hero__grid {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  align-items: center;
-  gap: var(--spacing-2xl);
-  overflow: visible;
-}
-
 .hero__content {
   text-align: center;
   max-width: 800px;
   margin: 0 auto;
-}
-
-.hero__visual {
-  width: 100%;
-  max-width: 520px;
-  margin: 0 auto;
-  overflow: visible;
-  position: relative;
-  z-index: 1;
-  height: clamp(260px, 40vw, 520px);
-}
-
-.hero__visual spline-viewer {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%) scale(0.9);
-  transform-origin: center;
-  width: 120%;
-  height: 120%;
-  display: block;
-  overflow: visible;
-  z-index: 1;
 }
 
 .hero__greeting {
@@ -1030,7 +1012,6 @@ img, svg, video, canvas {
 .project__mockup--mobile {
   max-width: 200px;
   margin: 0 auto;
-  overflow: visible;
 }
 
 .mockup__screen {
@@ -1039,7 +1020,7 @@ img, svg, video, canvas {
   border-radius: var(--border-radius);
   padding: var(--spacing-xs);
   border: 2px solid rgba(0, 229, 255, 0.2);
-  overflow: visible;
+  overflow: hidden;
 }
 
 .project__mockup--laptop .mockup__screen {
@@ -1507,23 +1488,6 @@ img, svg, video, canvas {
   .hero__buttons {
     flex-direction: column;
     align-items: center;
-  }
-
-  .hero__grid {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-xl);
-  }
-
-  .hero__content {
-    text-align: center;
-    margin: 0 auto;
-  }
-
-  .hero__visual spline-viewer {
-    width: 140%;
-    height: 140%;
-    transform: translate(-50%, -50%) scale(0.8);
   }
   
   .btn {
