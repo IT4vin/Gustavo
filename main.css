@@ -1102,7 +1102,8 @@ img, svg, video, canvas {
   opacity: 0.35;
 }
 
-.contact__bg spline-viewer {
+.contact__bg spline-viewer,
+.hero__bg spline-viewer {
   width: 100%;
   height: 100%;
 }
