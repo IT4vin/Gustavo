@@ -7,10 +7,10 @@
   --neon-teal: #2fffdc;
   
   /* Background Colors */
-  --bg-dark: #0b0f17;
-  --bg-darker: #05060a;
-  --bg-card: #1a1f2e;
-  --bg-card-hover: #242938;
+  --bg-dark: #111315;        /* Cinza metálico escuro (fundo geral) */
+  --bg-darker: #0b0c0e;      /* Cinza metálico mais profundo (separadores/rodapé) */
+  --bg-card: #1a1d21;        /* Cartões neutros, sem matiz azul */
+  --bg-card-hover: #23272d;  /* Hover com contraste suave */
   
   /* Text Colors */
   --text-primary: #ffffff;
@@ -20,7 +20,7 @@
   /* Gradients */
   --gradient-neon: linear-gradient(135deg, var(--neon-blue) 0%, var(--neon-purple) 50%, var(--neon-pink) 100%);
   --gradient-neon-reverse: linear-gradient(135deg, var(--neon-pink) 0%, var(--neon-purple) 50%, var(--neon-blue) 100%);
-  --gradient-dark: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-darker) 100%);
+  --gradient-dark: linear-gradient(135deg, #0f1113 0%, #0a0b0d 100%);
   
   /* Shadows */
   --shadow-neon-blue: 0 0 20px rgba(0, 229, 255, 0.3), 0 0 40px rgba(0, 229, 255, 0.1);
