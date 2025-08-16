@@ -529,17 +529,33 @@ function initContactForm() {
         submitButton.classList.add('btn--loading');
         
         try {
-            // Simulate form submission (replace with actual endpoint)
             const formData = new FormData(contactForm);
-            
-            // For demo purposes, we'll simulate a successful submission
-            await simulateFormSubmission(formData);
-            
-            showFeedback('Mensagem enviada com sucesso! Retornarei em breve.', 'success');
-            contactForm.reset();
-            
+            // Opcional: ajuda a organizar o assunto no provedor de formulário
+            if (subjectInput?.value) {
+                formData.append('_subject', subjectInput.value);
+            }
+
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                headers: { 'Accept': 'application/json' },
+                body: formData
+            });
+
+            if (response.ok) {
+                showFeedback('Mensagem enviada com sucesso! Retornarei em breve.', 'success');
+                contactForm.reset();
+            } else {
+                let errorMessage = 'Erro ao enviar mensagem. Tente novamente.';
+                try {
+                    const data = await response.json();
+                    if (data && data.errors) {
+                        errorMessage = data.errors.map(err => err.message).join(', ');
+                    }
+                } catch (_) {}
+                showFeedback(errorMessage, 'error');
+            }
         } catch (error) {
-            showFeedback('Erro ao enviar mensagem. Tente novamente.', 'error');
+            showFeedback('Erro ao enviar mensagem. Verifique sua conexão e tente novamente.', 'error');
         } finally {
             submitButton.classList.remove('btn--loading');
         }
