@@ -607,10 +607,29 @@ img, svg, video, canvas {
   z-index: 1;
 }
 
+.hero__grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: var(--spacing-2xl);
+}
+
 .hero__content {
   text-align: center;
   max-width: 800px;
   margin: 0 auto;
+}
+
+.hero__visual {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.hero__visual spline-viewer {
+  width: 100%;
+  height: clamp(260px, 40vw, 520px);
+  display: block;
 }
 
 .hero__greeting {
@@ -1075,6 +1094,25 @@ img, svg, video, canvas {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--spacing-2xl);
+  position: relative;
+}
+
+.contact__bg {
+  position: absolute;
+  inset: -20px; /* leve overflow para brilho */
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.35;
+}
+
+.contact__bg spline-viewer {
+  width: 100%;
+  height: 100%;
+}
+
+.contact__content > *:not(.contact__bg) {
+  position: relative;
+  z-index: 1;
 }
 
 .contact__info-title {
@@ -1455,6 +1493,21 @@ img, svg, video, canvas {
   .hero__buttons {
     flex-direction: column;
     align-items: center;
+  }
+
+  .hero__grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+  }
+
+  .hero__content {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .hero__visual spline-viewer {
+    height: clamp(220px, 60vw, 380px);
   }
   
   .btn {

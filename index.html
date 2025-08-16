@@ -37,6 +37,9 @@
     
     <!-- Vanilla Tilt -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+    
+    <!-- Spline Viewer -->
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.48/build/spline-viewer.js"></script>
 </head>
 <body>
     <!-- Interactive Background -->
@@ -105,7 +108,8 @@
         <section class="hero section" id="home">
             <!-- Particles disabled -->
             <div class="hero__container container">
-                <div class="hero__content will-animate">
+                <div class="hero__grid">
+                    <div class="hero__content will-animate">
                     <h1 class="hero__title">
                         <span class="hero__greeting">Olá, eu sou</span>
                         <span class="hero__name neon-text">Gustavo Souza</span>
@@ -125,6 +129,10 @@
                         <a href="#contact" class="btn btn--secondary">
                             <span>Contato</span>
                         </a>
+                    </div>
+                    </div>
+                    <div class="hero__visual will-animate">
+                        <spline-viewer url="https://prod.spline.design/vN4BNU8TMCpwq9aV/scene.splinecode"></spline-viewer>
                     </div>
                 </div>
                 
@@ -368,6 +376,9 @@
                 </div>
                 
                 <div class="contact__content will-animate">
+                    <div class="contact__bg">
+                        <spline-viewer url="https://prod.spline.design/vN4BNU8TMCpwq9aV/scene.splinecode"></spline-viewer>
+                    </div>
                     <div class="contact__info">
                         <h3 class="contact__info-title">Entre em contato</h3>
                         <p class="contact__info-description">
