@@ -11,6 +11,7 @@
   --bg-darker: #0b0c0e;      /* Cinza metálico mais profundo (separadores/rodapé) */
   --bg-card: #1a1d21;        /* Cartões neutros, sem matiz azul */
   --bg-card-hover: #23272d;  /* Hover com contraste suave */
+  --bg-menu: #000000;        /* Fundo do menu/header (preto) */
   
   /* Text Colors */
   --text-primary: #ffffff;
@@ -455,7 +456,7 @@ img, svg, video, canvas {
 }
 
 .header.scrolled {
-  background: rgba(11, 15, 23, 0.98);
+  background: var(--bg-menu);
   box-shadow: var(--shadow-dark);
 }
 
@@ -1418,7 +1419,7 @@ img, svg, video, canvas {
     right: -100%;
     width: 100%;
     height: 100vh;
-    background: var(--bg-darker);
+    background: var(--bg-menu);
     transition: right var(--transition-normal);
     padding: var(--spacing-2xl) var(--spacing-md);
   }
