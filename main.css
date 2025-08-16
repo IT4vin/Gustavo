@@ -258,6 +258,7 @@ img, svg, video, canvas {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 var(--spacing-sm);
+  overflow: visible;
 }
 
 .section {
@@ -612,6 +613,7 @@ img, svg, video, canvas {
   grid-template-columns: 1.1fr 0.9fr;
   align-items: center;
   gap: var(--spacing-2xl);
+  overflow: visible;
 }
 
 .hero__content {
@@ -624,12 +626,18 @@ img, svg, video, canvas {
   width: 100%;
   max-width: 520px;
   margin: 0 auto;
+  overflow: visible;
+  position: relative;
+  z-index: 1;
 }
 
 .hero__visual spline-viewer {
   width: 100%;
   height: clamp(260px, 40vw, 520px);
   display: block;
+  overflow: visible;
+  position: relative;
+  z-index: 1;
 }
 
 .hero__greeting {
