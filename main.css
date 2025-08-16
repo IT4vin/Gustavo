@@ -629,14 +629,19 @@ img, svg, video, canvas {
   overflow: visible;
   position: relative;
   z-index: 1;
+  height: clamp(260px, 40vw, 520px);
 }
 
 .hero__visual spline-viewer {
-  width: 100%;
-  height: clamp(260px, 40vw, 520px);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  transform-origin: center;
+  width: 120%;
+  height: 120%;
   display: block;
   overflow: visible;
-  position: relative;
   z-index: 1;
 }
 
@@ -1516,7 +1521,9 @@ img, svg, video, canvas {
   }
 
   .hero__visual spline-viewer {
-    height: clamp(220px, 60vw, 380px);
+    width: 140%;
+    height: 140%;
+    transform: translate(-50%, -50%) scale(0.8);
   }
   
   .btn {
