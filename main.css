@@ -1018,6 +1018,11 @@ img, svg, video, canvas {
   border-radius: var(--border-radius-large);
 }
 
+.project__mockup--mobile .mockup__image {
+  object-fit: contain;
+  object-position: center;
+}
+
 .mockup__image {
   width: 100%;
   height: 100%;
